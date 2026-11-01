@@ -1,0 +1,227 @@
+<!--
+v1.0 2026/9/23  tajiri create new
+v2.0 2026/9/24  tajiri add CSS 
+v2.1 2026/9/27  tajiri add -1 button
+v3.0 2026/10/31 tajiri
+v3.1 2026/10/31 tajiri
+v3.2 2026/10/31 tajiri
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	<!--add v3.0-->
+    <title>習慣化システム</title>
+	<link rel="stylesheet" href="style_dayx.css">	
+</head>
+
+<body>
+
+<!-- ミニマム目標確認画面 -->
+<div id="check-screen" class="check-screen">
+
+    <div class="check-card">
+
+        <h1>習慣化システム</h1>
+
+        <div class="check-icon">✓</div>
+
+        <h2>今日のミニマム目標</h2>
+
+        <p class="check-question">
+            達成しましたか？
+        </p>
+
+        <p class="check-description">
+            まずは今日の最低限の目標を確認しましょう。
+        </p>
+
+        <button id="yes-button" class="yes-button">
+            はい
+        </button>
+
+        <button id="no-button" class="no-button">
+            いいえ
+        </button>
+
+    </div>
+
+</div>
+
+<!-- メイン画面 -->
+<!-- <div id="main-screen"> -->
+<div id="main-screen">
+
+    <h1>習慣化システム</h1>
+
+<!-- 今日の情報 -->	<!--mod v3.2-->
+<div class="card today-card">
+
+    <div class="today-row">
+        <span class="today-label">今日の日付</span>
+        <span id="today-date" class="today-date">2026年10月31日（土）</span>
+    </div>
+
+    <div class="today-row">
+        <label for="day-type">今日をどうする？</label>
+        <select id="day-type">
+            <option value="" selected disabled>選択してください</option>
+			<option value="問題なし">問題なし</option>
+            <option value="休養">休養</option>
+            <option value="病気">病気</option>
+            <option value="心身不調">心身不調</option>
+        </select>
+    </div>
+
+    <div class="today-row">
+        <span class="today-label">完全休養日 残り</span>
+        <span id="rest-days" class="rest-days">3日</span>
+    </div>
+
+</div>
+
+<div class="blue_card">		<!--mod v3.1-->
+    <h2>現在ポイント</h2>
+
+    <p class="balance" id="point-balance">3,100 Pt</p>
+
+    <div class="point-row">
+        <span>ポイント追加</span>
+        <input id="point-add-input" type="number" inputmode="numeric"
+               min="0" placeholder="追加Pt">
+
+        <select id="point-multiplier">
+            <option value="1">×1</option>
+            <option value="2">×2</option>
+            <option value="3">×3</option>
+            <option value="4">×4</option>
+            <option value="5">×5</option>
+			<option value="10">×10</option>
+        </select>
+
+        <button id="point-add-button" class="add-button">追加</button>
+    </div>
+	
+	<div class="point-row">
+		<span>ポイント消費</span>
+        <input id="point-use-input" type="number"
+               inputmode="numeric" min="0" placeholder="消費Pt">
+        <span></span>
+        <button id="point-use-button" class="consume-button">使う</button>
+	</div>
+</div>
+
+
+<!-- 今月のお金 -->
+<div class="green_card">
+    <h2>今月のお金</h2>
+
+    <div class="money-row">
+        <span class="money-name">外食</span>
+        <span id="money-eating-balance" class="money-balance">30,000円</span>
+        <input id="money-eating-input" type="number" inputmode="numeric" min="0" placeholder="使用額">
+        <button id="money-eating-button">使う</button>
+    </div>
+
+    <div class="money-row">
+        <span class="money-name">ガソリン</span>
+        <span id="money-gas-balance" class="money-balance">8,300円</span>
+        <input id="money-gas-input" type="number" inputmode="numeric" min="0" placeholder="使用額">
+        <button id="money-gas-button">使う</button>
+    </div>
+
+    <div class="money-row">
+        <span class="money-name">娯楽代</span>
+        <span id="money-entertainment-balance" class="money-balance">55,000円</span>
+        <input id="money-entertainment-input" type="number" inputmode="numeric" min="0" placeholder="使用額">
+        <button id="money-entertainment-button">使う</button>
+    </div>
+
+    <div class="money-row">
+        <span class="money-name">旅行費</span>
+        <span id="money-travel-balance" class="money-balance">30,000円</span>
+        <input id="money-travel-input" type="number" inputmode="numeric" min="0" placeholder="使用額">
+        <button id="money-travel-button">使う</button>
+    </div>
+
+    <div class="money-row">
+        <span class="money-name">帰省費</span>
+        <span id="money-homecoming-balance" class="money-balance">20,000円</span>
+        <input id="money-homecoming-input" type="number" inputmode="numeric" min="0" placeholder="使用額">
+        <button id="money-homecoming-button">使う</button>
+    </div>
+</div>
+
+<!-- 今週の時間 -->
+<div class="purple_card">
+    <h2>今週の時間</h2>
+
+    <div class="time-row">
+        <span class="time-name">YouTube</span>
+        <span id="youtube-balance" class="time-balance">270分</span>
+        <input id="youtube-input" type="number" inputmode="numeric" min="0" placeholder="使用分">
+        <button id="youtube-button">使う</button>
+    </div>
+
+    <div class="time-row">
+        <span class="time-name">Prime Video</span>
+        <span id="prime-balance" class="time-balance">60分</span>
+        <input id="prime-input" type="number" inputmode="numeric" min="0" placeholder="使用分">
+        <button id="prime-button">使う</button>
+    </div>
+</div>
+
+<!-- Redmine -->
+<div class="card redmine-card">
+
+    <h2>Redmine</h2>
+
+<!--    <p class="balance">進行中のチケット：3件</p>	 -->
+
+    <a href="https://tmkd.cloud.redmine.jp/issues?query_id=35"
+       target="_blank">
+        Redmineを開く →
+    </a>
+
+</div>
+
+<!-- ポイント積み立て -->
+<div class="card">
+
+    <h2>ポイント積み立て</h2>
+
+    <p id="savings-balance" class="balance">現在の積立残高：1,250 Pt</p>
+
+    <div class="savings-row">
+        <span>ポイント追加</span>
+
+        <input id="savings-add-input" type="number"
+               inputmode="numeric" min="0" placeholder="追加Pt">
+
+        <button id="savings-add-button" class="add-button">
+            追加
+        </button>
+    </div>
+
+    <div class="savings-row">
+        <span>ポイント返却</span>
+
+        <input id="savings-use-input" type="number"
+               inputmode="numeric" min="0" placeholder="消費Pt">
+
+        <button id="savings-use-button" class="consume-button">
+            戻す
+        </button>
+    </div>
+
+</div>
+
+</div>
+<!-- </div> -->
+
+<script src="script_dayx.js"></script>
+
+</body>
+</html>
