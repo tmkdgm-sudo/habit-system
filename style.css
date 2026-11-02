@@ -1,0 +1,416 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;					/* add v3.0 */
+    padding: 12px;				/* add v3.0 */
+    background-color: #f5f5f5;
+    font-family: sans-serif;	/* add v3.0 */
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.green_card {
+    background-color: #e4f3eb;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.blue_card {
+    background-color: #e6f2ff;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.purple_card {
+    background-color: #e6e6fa;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.action-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+.action-row span {
+	width: 100px;
+    font-size: 18px;
+	white-space: nowrap;
+}
+
+.action-row button {
+    width: auto;
+    padding: 8px 12px;
+    margin: 0;
+    font-size: 16px;
+}
+
+
+.point-row {
+    display: grid;
+    grid-template-columns: 115px minmax(0, 1fr) 55px 55px;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+}
+
+.point-row input {
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.point-row select {
+    width: 55px;
+    height: 30px;
+    min-width: 0;
+    padding: 2px;
+    font-size: 14px;
+}
+
+.point-row button {
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+}
+
+.point-row .consume-button {
+	width: 100%;
+    min-width: 0;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+/*    background-color: #3689D5; */
+	background-color: #D95770;
+    color: white;
+}
+
+.point-row .add-button {
+	width: 100%;
+    min-width: 0;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #399B79;
+    color: white;
+}
+
+/* 今日の情報 */
+
+.today-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #ffffe0;
+}
+
+.today-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 40px;
+}
+
+.today-label,
+.today-row label {
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.today-date {
+    font-size: 17px;
+    font-weight: bold;
+	color: #3689D5;
+}
+
+.today-row select {
+    flex: 1;
+    min-width: 0;
+    max-width: 200px;
+    padding: 9px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.rest-days {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3689D5;
+}
+
+/* 今月のお金 */
+
+.money-row {
+    display: grid;
+    grid-template-columns: 70px 85px minmax(0, 1fr) 48px;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.money-name {
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.money-balance {
+    white-space: nowrap;
+    text-align: right;
+	font-weight: bold;
+    font-size: 20px;
+    color: #3689D5;
+}
+
+.money-row input {
+    width: 100%;
+    min-width: 0;
+    padding: 8px 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.money-row button {
+    width: 48px;
+    padding: 9px 3px;
+    margin: 0;
+    font-size: 16px;
+    white-space: nowrap;
+	background-color: #D95770;
+    color: white;
+}
+
+/* 今週の時間 */
+
+.time-row {
+    display: grid;
+    grid-template-columns: 95px 55px minmax(0, 1fr) 48px;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.time-name {
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.time-balance {
+    white-space: nowrap;
+    text-align: right;
+	font-weight: bold;
+    font-size: 20px;
+    color: #3689D5;
+}
+
+.time-row input {
+    width: 100%;
+    min-width: 0;
+    padding: 8px 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.time-row button {
+    width: 48px;
+    padding: 9px 3px;
+    margin: 0;
+    font-size: 16px;
+    white-space: nowrap;
+	background-color: #D95770;
+    color: white;
+}
+
+/* Redmine */
+.redmine-card {
+    background-color: #ffe4e1;
+
+}
+
+
+.redmine-card a {
+    display: block;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #f0f5fa;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    color: #2869a5;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* ポイント積み立て */
+.savings-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.savings-row span {
+    width: 100px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.savings-row input {
+    flex: 1;
+    min-width: 0;
+    width: 0;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.savings-row button {
+    width: auto;
+    flex-shrink: 0;
+    padding: 8px 10px;
+    margin: 0;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.savings-row .add-button {
+    background-color: #399B79;
+    color: white;
+}
+
+.savings-row .consume-button {
+    /*background-color: #D95770;*/
+	background-color: #1E90FF;
+    color: white;
+}
+
+/* ミニマム目標確認画面 */
+
+.check-screen {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 25px 20px;
+    background-color: white;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.check-card h1 {
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+
+.check-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: #e4f3eb;
+    color: #399B79;
+    font-size: 40px;
+    line-height: 65px;
+}
+
+.check-card h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.check-question {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.check-description {
+    font-size: 16px;
+    color: #777777;
+    margin-bottom: 30px;
+}
+
+.check-card button {
+    width: 100%;
+    padding: 15px;
+    margin: 7px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.yes-button {
+    background-color: #399B79;
+    color: white;
+}
+
+.no-button {
+    background-color: #eeeeee;
+    color: #555555;
+}
+
+/* 画面設計中は確認画面だけ表示 */
+#main-screen {
+    display: none;
+}
+
+.point-row input,
+.point-row select,
+.point-row button {
+    width: 100%;
+    min-width: 0;
+}
+
+/* スマホで入力欄をタップした際の自動ズームを防ぐ */
+input,
+select,
+textarea {
+    font-size: 16px;
+}
+
+.balance {
+    font-weight: bold;
+    font-size: 20px;
+	color: #3689D5;
+}
+
+.green {
+	background-color: #e4f3eb;
+}
