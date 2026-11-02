@@ -380,9 +380,9 @@ if (
     savedResetMonth !== currentMonth
 ) {
     const monthlyItems = [
-        { key: "moneyEating", id: "money-eating-balance", amount: 20000 },
+        { key: "moneyEating", id: "money-eating-balance", amount: 55000 },
         { key: "moneyGas", id: "money-gas-balance", amount: 5000 },
-        { key: "moneyEntertainment", id: "money-entertainment-balance", amount: 30000 },
+        { key: "moneyEntertainment", id: "money-entertainment-balance", amount: 20000 },
         { key: "moneyTravel", id: "money-travel-balance", amount: 20000 }
     ];
 
